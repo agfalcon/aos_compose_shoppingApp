@@ -1,4 +1,4 @@
-package kgb.plum.shoppingapp.ui.theme
+package kgb.plum.app.ui.theme
 
 import android.app.Activity
 import android.os.Build

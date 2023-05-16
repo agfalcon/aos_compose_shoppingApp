@@ -1,4 +1,4 @@
-package kgb.plum.shoppingapp.ui.theme
+package kgb.plum.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

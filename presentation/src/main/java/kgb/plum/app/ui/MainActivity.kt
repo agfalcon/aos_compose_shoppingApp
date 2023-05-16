@@ -1,4 +1,4 @@
-package kgb.plum.shoppingapp
+package kgb.plum.app.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import kgb.plum.shoppingapp.ui.theme.ShoppingAppTheme
+import kgb.plum.app.ui.theme.ShoppingAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
