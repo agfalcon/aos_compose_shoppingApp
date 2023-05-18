@@ -2,12 +2,17 @@ package kgb.plum.presentation.db.endtity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverter
+import androidx.room.TypeConverters
 import kgb.plum.domain.model.Category
 import kgb.plum.domain.model.Price
 import kgb.plum.domain.model.Product
 import kgb.plum.domain.model.Shop
+import kgb.plum.presentation.db.converter.BasketConverter
+import kgb.plum.presentation.db.converter.LikeConverter
 
 @Entity(tableName = "like")
+@TypeConverters(LikeConverter::class)
 data class LikeProductEntity(
     @PrimaryKey
     val productId: String,

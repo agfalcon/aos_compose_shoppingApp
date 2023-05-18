@@ -2,13 +2,16 @@ package kgb.plum.presentation.db.endtity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
 import kgb.plum.domain.model.Category
 import kgb.plum.domain.model.Price
 import kgb.plum.domain.model.Product
 import kgb.plum.domain.model.Shop
+import kgb.plum.presentation.db.converter.BasketConverter
 
 
 @Entity(tableName = "basket")
+@TypeConverters(BasketConverter::class)
 data class BasketProductEntity(
     @PrimaryKey
     val productId: String,
