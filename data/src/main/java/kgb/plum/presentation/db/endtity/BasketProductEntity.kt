@@ -1,10 +1,16 @@
 package kgb.plum.presentation.db.endtity
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kgb.plum.domain.model.Category
 import kgb.plum.domain.model.Price
+import kgb.plum.domain.model.Product
 import kgb.plum.domain.model.Shop
 
+
+@Entity(tableName = "basket")
 data class BasketProductEntity(
+    @PrimaryKey
     val productId: String,
     val productName: String,
     val imageUrl: String,
@@ -14,3 +20,16 @@ data class BasketProductEntity(
     val isNew: Boolean,
     val isFreeShipping: Boolean,
 )
+
+fun BasketProductEntity.toDomainModel() : Product {
+    return Product(
+        productId = productId,
+        productName = productName,
+        imageUrl = imageUrl,
+        price = price,
+        category = category,
+        shop = shop,
+        isNew = isNew,
+        isFreeShipping = isFreeShipping
+    )
+}
